@@ -1,4 +1,4 @@
-# Project 2 (Group 3)
+# Only Pans
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ## Description
