@@ -2,7 +2,8 @@
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ## Description
-This is just a placeholder until we come up with a concept and name for this group project
+
+This is a one-stop-shop for browsing, submitting and saving your favorite holiday inspire recipes.
 
 
 ## Table of Contents
