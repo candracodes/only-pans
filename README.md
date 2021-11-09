@@ -64,6 +64,7 @@ This project is created using the following packages
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
 - [Express-Session](https://www.npmjs.com/package/express-session)
 - [Connect Session](https://www.npmjs.com/package/connect-session-sequelize)
+- [Express Validator](https://express-validator.github.io/docs/)
 
 ## Libraries
 
