@@ -3,8 +3,8 @@
     <form>
       <h1 class="h3 mb-3 fw-normal">Sign In</h1>
       <p>Welcome to OnlyPans, your one stop shop for holiday recipes.</p>
-      <small>Don't have an account? <a href="#">Sign Up</a></small>
-
+      <small>Don't have an account? <a href="#signup">Sign Up</a></small>
+      
       <div class="form-floating mb-3 mt-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Email address</label>
@@ -17,10 +17,35 @@
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     </form>
   </main>
+  
+  
+  {{!-- Sign up --}}
+  <section id="signup">
+    <div class="login-card">
+          <h2 class="page-title">Signup</h2>
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="username-signup">Username:</label>
+              <input class="form-input" type="text" id="username-signup" />
+            </div>
+            <div class="form-group">
+              <label for="email-signup">Email:</label>
+              <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+              <label for="password-signup">Password:</label>
+              <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">signup</button>
+            </div>
+          </form>
+      </div>
+  </section>
   <!-- FORM: END -->
   
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-
+  <script src="./js/login.js"></script>
