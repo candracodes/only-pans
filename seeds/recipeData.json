@@ -1,11 +1,11 @@
-// placeholder for seeded recipes
+
 [
     {
         "recipe_name": "Maple, Walnut and Bacon Brie Bites",
         "ingredients": "8 mini Brie wheels, 1/4 cup chopped toasted walnuts, 1 tablespoon pure maple syrup, 1 teaspoon apple-cider vinegar, 5 slices cooked bacon (chopped), Sliced scallions (for garnish)",
         "directions": "1. Preheat the oven to 250 degrees F 2. On a baking sheet or ovensafe serving platter, bake the Brie wheels until warm to the touch and slightly oozy, 3 to 5 minutes. 3. In a small bowl, combine the walnuts, maple syrup, vinegar and bacon. Top each warmed Brie bite with a spoonful of the maple syrup mixture. Garnish with scallions. Serve immediately.",
         "recipe_type": "starters",
-        // is this the proper datatype or name?
+        
         "recipe_time": 15
     }
 ]
