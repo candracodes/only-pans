@@ -1,1 +1,177 @@
-{{!-- THIS IS A PLACEHOLDER --}}
+<!-- START: MAIN -->
+  <main class="main-top-100">
+    <div class="container-fluid">
+      <!-- START: SECTION 1 — JUMBOTRON -->
+      <div class="p-5 mb-4 bg-light rounded-3 jumbotron-photo">
+        <div class="row container-fluid py-5">
+          <div class="col-md-8"></div>
+          <div class="col-md-4 fs-4 text-white">
+            <h1 class="display-5 fw-bold">Welcome to OnlyPans!</h1>
+            <p>Some sort of catchy tagline...</p>
+            <a class="btn btn-primary" href="#our-recipes" role="button">Take a look around</a>
+          </div>
+        </div>
+      </div>
+      <!-- END: SECTION 1 — JUMBOTRON -->
+
+      <!-- START: SECTION 2 — OUR RECIPES -->
+      <div id="our-recipes" class="row align-items-md-stretch bg-dark white-text">
+        <h2 class="text-white ps-5 pt-5">Our Recipes</h2>
+        <p class="text-gray ps-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum ...
+          this is dummy text</p>
+        <hr class="title-border">
+        <div class="row align-items-md-stretch bg-dark">
+          <!-- BOX 1 -->
+          <div class="col-md-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <img src="images/thumbs-starter.jpg" class="w-100">
+              <h2>Starters</h2>
+              <button class="btn btn-outline-light" type="button">View Recipes</button>
+            </div>
+          </div>
+
+          <!-- BOX 2 -->
+          <div class="col-md-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <img src="images/thumbs-entree.jpg" class="w-100">
+              <h2>Entrees</h2>
+              <button class="btn btn-outline-light" type="button">View Recipes</button>
+            </div>
+          </div>
+
+          <!-- BOX 3 -->
+          <div class="col-md-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <img src="images/thumbs-side.jpg" class="w-100">
+              <h2>Side Dishes</h2>
+              <button class="btn btn-outline-light" type="button">View Recipes</button>
+            </div>
+          </div>
+
+          <!-- BOX 4 -->
+          <div class="col-md-3">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+              <img src="images/thumbs-dessert.jpg" class="w-100">
+              <h2>Desserts</h2>
+              <button class="btn btn-outline-light" type="button">View Recipes</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END: SECTION 2 — OUR RECIPES -->
+
+      <!-- START: SECTION 3 — SUBMIT RECIPE -->
+      <div id="our-recipes" class="row align-items-md-stretch bg-light">
+        <h2 class="ps-5 pt-5">Submit a Recipe</h2>
+        <p class="text-gray ps-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum ...
+          this is dummy text</p>
+        <hr class="title-border">
+        <div class="row align-items-md-stretch bg-light">
+          <!-- CONTENT AREA -->
+          <div class="col-md-12">
+            <div class="h-100 p-5 rounded-3">
+              <!-- START: FORM -->
+              <form class="new-recipe-form">
+
+                <div class="row">
+                  <!-- LEFT SIDE OF FORM -->
+                  <div class="col-lg-6 col-md-6 col-sm-12">
+                    <!-- DISH NAME -->
+                    <div class="mb-3">
+                      <label for="nameOfDish" class="form-label">Dish Name</label>
+                      <input id="dish_name" type="text" class="form-control" aria-describedby="nameOfDish">
+                    </div>
+
+                    <!-- RECIPE TYPE -->
+                    <label for="recipe_type" class="form-label">Recipe Type</label>
+                    <select id="recipe_type" class="form-select mb-3" aria-label="recipe_type">
+                      <option selected>Select what category this dish belongs to</option>
+                      <option value="1">Starters</option>
+                      <option value="2">Entrees</option>
+                      <option value="3">Sides</option>
+                      <option value="4">Desserts</option>
+                    </select>
+
+                    <!-- INGREDIENTS -->
+                    <label for="ingredients" class="form-label">Ingredients</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Type an ingredient, and hit the add button"
+                        aria-label="ingredients" aria-describedby="ingredients">
+                      <button class="btn btn-outline-secondary" type="button" id="ingredients"><i
+                          class="fas fa-plus-circle"></i> Add Ingredient</button>
+                    </div>
+
+                    <!-- DIRECTIONS -->
+                    <label for="directions" class="form-label">Directions</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Add a recipe step, and hit the add button"
+                        aria-label="directions" aria-describedby="directions">
+                      <button class="btn btn-outline-secondary" type="button" id="directions"><i
+                          class="fas fa-plus-circle"></i> Add Step</button>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Recipe</button>
+                  </div>
+
+                  <!-- RIGHT SIDE OF FORM-->
+                  <div class="col-lg-6 col-md-6 col-sm-12 text-gray">
+
+                    <span class="mb-5 pb-5" id="showIngredients">
+                      (Show ingredients here)
+                    </span>
+
+                    <br>
+
+                    <span class="mb-5 pb-5" id="showDirections">
+                      (Show directions here)
+                    </span>
+                  </div>
+                </div>
+
+              </form>
+              <!-- END: FORM -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END: SECTION 2 — SUBMIT RECIPE -->
+
+    </div>
+  </main>
+  <!-- END: MAIN -->
+
+  <!-- START: FOOTER -->
+  <footer class="px-4 py-4 pt-4 mt-4 mb-4 text-white bg-dark">
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <h3>About this project</h3>
+        <p class="text-muted">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum… this is dummy text.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-12 footer-elements">
+        <h3>Contributors</h3>
+        <a href="https://github.com/candracodes" target="_blank"><i class="fab fa-github"></i> Candra Fried</a><br>
+        <a href="https://github.com/hargis32" target="_blank"><i class="fab fa-github"></i> Austin Pratt</a><br>
+        <a href="https://github.com/thutuephan" target="_blank"><i class="fab fa-github"></i> Alice Phan</a><br>
+        <a href="https://github.com/dduckpena" target="_blank"><i class="fab fa-github"></i> Daniel Pena</a>
+      </div>
+      <div class="col-md-4 col-sm-12 footer-elements">
+        <h3>Plans for future development</h3>
+        <ul class="ps-0 text-gray">
+          <ol class="ps-0"><strong>Live Chat — </strong>Did you accidentally burn the Thanksgiving turkey? Chat with our live customer service reps to troubleshoot your kitchen crisis.</ol>
+          <ol class="ps-0"><strong>Recipe Card Uploader —</strong> Do you have family recipes that have been passed down from several generations? With our recipe card uploader, you can flip through saved recipes by viewing them as image cards, rather than re-writing the entire food formula.</ol>
+          <ol class="ps-0"><strong>Search & Pagination — </strong> We anticipate receiving hundreds of recipes. In an effort to make browsing easier, we’ll implement search and pagination.</ol>
+        </ul>
+        
+      </div>
+    </div>
+  </footer>
+  <!-- END: FOOTER -->
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>

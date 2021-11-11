@@ -1,1 +1,120 @@
-/* THIS IS A PLACEHOLDER */
+/* ========================================== 
+    -- GENERIC STYLES
+=========================================== */
+html,
+body {
+  height: 100%;
+}
+
+.main-top-100 {
+  margin-top: 100px !important;
+}
+
+/* ========================================== 
+    -- LOGIN PAGE
+=========================================== */
+body::after {
+  content: "";
+  background: url("/images/jumbotron-turkey.jpg");
+  opacity: 0.35;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* ========================================== 
+    -- HOME — FORM
+=========================================== */
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  margin-top: 16em;
+  background-color: #ffffff;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+
+/* ========================================== 
+    -- HOME — JUMBOTRON
+=========================================== */
+.jumbotron-photo {
+  background: url("../../images/jumbotron-turkey.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* ========================================== 
+  -- HOME — RECIPE SECTION
+=========================================== */
+.text-gray {
+  color: #8c8c8c;
+}
+
+.title-border {
+  color: #1e98d7;
+  opacity: 1;
+  margin-left: 3rem !important;
+  width: 30%;
+}
+
+/* ========================================== 
+  -- FOOTER
+=========================================== */
+.footer-elements {
+    text-decoration: none;
+}
+.footer-elements a {
+    text-decoration: none;
+    color: #6c757d!important;
+
+}
+
+/* ========================================== 
+  -- SECTION
+=========================================== */
+
+/* ========================================== 
+  -- SECTION
+=========================================== */
+
+
+/* ========================================== 
+    -- MEDIA QUERIES
+=========================================== */
