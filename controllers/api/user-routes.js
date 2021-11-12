@@ -58,7 +58,7 @@ router.post('/logout', (req, res) => {
     // when the user logs out, the session is destroyed
     if (req.session.loggedIn) {
         req.session.destroyed(() => {
-        res.status(204).end();
+        res.status(204).end(); // empty content but everything is good
         });
     } else {
         res.status(404).end();
