@@ -74,7 +74,7 @@ body::after {
     -- HOME — JUMBOTRON
 =========================================== */
 .jumbotron-photo {
-  background: url("../../images/jumbotron-turkey.jpg");
+  background: url("/images/jumbotron-turkey.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -107,8 +107,36 @@ body::after {
 }
 
 /* ========================================== 
-  -- SECTION
+  -- RECIPES PAGE — SUB-MENU
 =========================================== */
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu li {
+  float: left;
+  list-style: none;
+}
+
+.submenu li a {
+  display: block;
+  text-decoration: none;
+  color: #6c757d!important;
+}
+
+.submenu li a:hover {
+  color: #ffffff!important;
+}
+
+
+/* ========================================== 
+  -- MY PROFILE
+=========================================== */
+.text-blue {
+  color: #1e98d7 !important;
+}
 
 /* ========================================== 
   -- SECTION
@@ -118,3 +146,10 @@ body::after {
 /* ========================================== 
     -- MEDIA QUERIES
 =========================================== */
+/* MOBILE — LARGE */
+@media (max-width: 425px) {
+  .submenu li {
+    float: none;
+  }
+  
+}
