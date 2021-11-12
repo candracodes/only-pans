@@ -4,12 +4,10 @@
   "description": "This is just a placeholder until we come up with a concept and name for this group project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "nodemon server.js",
     "dev": "nodemon -w server.js",
     "start": "node server.js"
-
- 
   },
   "repository": {
     "type": "git",
@@ -30,6 +28,8 @@
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
     "express-validator": "^6.13.0",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.0",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
   },
