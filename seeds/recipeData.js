@@ -1,4 +1,6 @@
-[
+const { Recipe } = require('../models');
+
+const recipeData = [
     {
         "recipe_name": "Maple, Walnut and Bacon Brie Bites",
         "ingredients": "8 mini Brie wheels, 1/4 cup chopped toasted walnuts, 1 tablespoon pure maple syrup, 1 teaspoon apple-cider vinegar, 5 slices cooked bacon (chopped), Sliced scallions (for garnish)",
@@ -35,4 +37,8 @@
         "recipe_type": "sides",
         "recipe_time": 15
     }
-]
+];
+
+const seedRecipes = () => Recipe.bulkCreate(recipeData);
+
+module.exports = seedRecipes;
