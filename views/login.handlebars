@@ -1,0 +1,93 @@
+<!-- TODO: We should add logic here that hides sign up form and only displays it once someone clicks "Sign Up" button -->
+
+<!-- START: LOGIN FORM -->
+  <main id="signInContainer" class="form-signin">
+    <form id="signin">
+      <h1 class="h3 mb-3 fw-normal">Sign In</h1>
+      <p>Welcome to OnlyPans, your one stop shop for holiday recipes.</p>
+      <small>Don't have an account? <a class="showSignUp">Sign Up</a></small>
+      
+      <div class="form-floating mb-3 mt-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <!-- TODO: Change the href here so that it swaps to home page after authentication -->
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    </form>
+  </main>
+  <!-- END: LOGIN FORM -->
+
+  <!-- START: SIGN UP FORM -->
+  <main id="signUpContainer" class="form-signin">
+    <form class="signup-form" id="signup">
+      <h1 class="h3 mb-3 fw-normal page-title">Sign Up</h1>
+      <p>Browse tons of recipes, and save your favorite dishes.</p>
+      <small>Already have an account? <a class="showSignIn">Sign In</a></small>
+      
+      <div class="form-floating mb-3 mt-3">
+        <input type="text" class="form-control" id="fullname" placeholder="John Doe">
+        <label for="fullname">Full Name</label>
+      </div>
+      <div class="form-floating mb-3 mt-3">
+        <input type="email" class="form-control" id="email" placeholder="email@email.com">
+        <label for="email">Email</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="password" placeholder="Password">
+        <label for="password">Password</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="confirmpassword" placeholder="Password">
+        <label for="confirmpassword">Confirm Password</label>
+      </div>
+      <!-- TODO: Change the href here so that it swaps to home page after authentication -->
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
+    </form>
+  </main>
+  <!-- END: SIGN UP FORM -->
+  
+  
+  {{!-- Sign up --}}
+  <!-- TODO: Delete this box -->
+  {{!-- <section id="signup">
+    <div class="login-card">
+          <h2 class="page-title">Signup</h2>
+          <form class="form signup-form">
+            <div class="form-group">
+              <label for="username-signup">Username:</label>
+              <input class="form-input" type="text" id="username-signup" />
+            </div>
+            <div class="form-group">
+              <label for="email-signup">Email:</label>
+              <input class="form-input" type="text" id="email-signup" />
+            </div>
+            <div class="form-group">
+              <label for="password-signup">Password:</label>
+              <input class="form-input" type="password" id="password-signup" />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" type="submit">signup</button>
+            </div>
+          </form>
+      </div>
+  </section> --}}
+  <!-- FORM: END -->
+  
+
+  <!-- SCRIPTS -->
+
+  <!-- BOOTSTRAP JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  <!-- JQUERY CORE JS -->
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+  <!-- JQUERY-UI JS -->
+  <script src="/node_modules/jquery-ui/external/jquery/jquery.js"></script>
+  
+  <!-- CUSTOM JS -->
+  <script src="/js/login.js"></script>

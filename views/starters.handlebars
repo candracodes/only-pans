@@ -1,0 +1,138 @@
+<!-- START: MAIN -->
+    <main class="main-top-100">
+        <div class="container-fluid">
+
+            <!-- START: SECTION 1 — INTRO -->
+            <div id="our-recipes" class="row align-items-md-stretch bg-dark white-text mb-5">
+                <h2 class="text-white ps-5 pt-5">Starters</h2>
+                <hr class="title-border mb-2">
+                <ul class="text-white submenu ms-3">
+                    <!--TODO: Swap these hrefs so that they link to the appropriate routes -->
+                    <li class="p-3"><a href="recipes.handlebars"><i class="fas fa-angle-double-left"></i> All Recipes</a></li>
+                    <li class="p-3"><a href="starters.handlebars"><i class="fas fa-utensils"></i> Starters</a></li>
+                    <li class="p-3"><a href="entrees.handlebars"><i class="fas fa-utensils"></i> Entrees</a></li>
+                    <li class="p-3"><a href="sides.handlebars"><i class="fas fa-utensils"></i> Side Dishes</a></li>
+                    <li class="p-3"><a href="desserts.handlebars"><i class="fas fa-utensils"></i> Desserts</a></li>
+                </ul>
+            </div>
+            <!-- END: SECTION 1 — INTRO -->
+
+            <!-- START: SECTION 2 — RECIPES -->
+            <div id="our-recipes" class="row align-items-md-stretch bg-light">
+                <h2 class="ps-5 pt-5">{Some sort of sexy caption... }</h2>
+                <hr class="title-border">
+                <div class="row align-items-md-stretch">
+                    <!-- DISH 1 -->
+                    <div class="col-md-3">
+                        <div class="h-100 p-5 rounded-3">
+                            <img src="images/thumbs-starter.jpg" class="w-100">
+                            <h2 class="dish_name">{dish_name}</h2>
+                            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">View Recipe</button>
+                        </div>
+                    </div>
+                    <!-- DISH 2 -->
+                    <div class="col-md-3">
+                        <div class="h-100 p-5 rounded-3">
+                            <img src="images/thumbs-starter.jpg" class="w-100">
+                            <h2 class="dish_name">{dish_name}</h2>
+                            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">View Recipe</button>
+                        </div>
+                    </div>
+                    <!-- DISH 3 -->
+                    <div class="col-md-3">
+                        <div class="h-100 p-5 rounded-3">
+                            <img src="images/thumbs-starter.jpg" class="w-100">
+                            <h2 class="dish_name">{dish_name}</h2>
+                            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">View Recipe</button>
+                        </div>
+                    </div>
+                    <!-- DISH 4 -->
+                    <div class="col-md-3">
+                        <div class="h-100 p-5 rounded-3">
+                            <img src="images/thumbs-starter.jpg" class="w-100">
+                            <h2 class="dish_name">{dish_name}</h2>
+                            <button class="btn btn-outline-dark" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END: SECTION 2 — STARTERS -->
+
+        </div>
+    </main>
+    <!-- END: MAIN -->
+
+    <!-- START: FOOTER -->
+    <footer class="px-4 py-4 pt-4 mt-4 mb-4 text-white bg-dark">
+        <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <h3>About this project</h3>
+                <p class="text-muted">
+                    {Daniel, take a crack at writing a synopsis. Make it "sexy" lol}
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-12 footer-elements">
+                <h3>Contributors</h3>
+                <a href="https://github.com/candracodes" target="_blank"><i class="fab fa-github"></i> Candra
+                    Fried</a><br>
+                <a href="https://github.com/hargis32" target="_blank"><i class="fab fa-github"></i> Austin Pratt</a><br>
+                <a href="https://github.com/thutuephan" target="_blank"><i class="fab fa-github"></i> Alice Phan</a><br>
+                <a href="https://github.com/dduckpena" target="_blank"><i class="fab fa-github"></i> Daniel Pena</a>
+            </div>
+            <div class="col-md-4 col-sm-12 footer-elements">
+                <h3>Plans for future development</h3>
+                <ul class="ps-0 text-gray">
+                    <ol class="ps-0"><strong>Live Chat — </strong>Did you accidentally burn the Thanksgiving turkey?
+                        Chat with our live customer service reps to troubleshoot your kitchen crisis.</ol>
+                    <ol class="ps-0"><strong>Recipe Card Uploader —</strong> Do you have family recipes that have been
+                        passed down from several generations? With our recipe card uploader, you can flip through saved
+                        recipes by viewing them as image cards, rather than re-writing the entire food formula.</ol>
+                    <ol class="ps-0"><strong>Search & Pagination — </strong> We anticipate receiving hundreds of
+                        recipes. In an effort to make browsing easier, we’ll implement search and pagination.</ol>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <!-- END: FOOTER -->
+
+    <!-- START: MODAL POP-UP -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{dish_name}</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <img src="images/thumb-placeholder.png" width="100%" />
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <h4>Ingredients</h4>
+                            <p class="ingredients">{ingredients}</p>
+
+                            <h4>Directions</h4>
+                            <p class="directions">{directions}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-secondary mr-auto" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- START: MODAL POP-UP -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>

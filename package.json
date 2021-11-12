@@ -2,9 +2,12 @@
   "name": "project-2",
   "version": "1.0.0",
   "description": "This is just a placeholder until we come up with a concept and name for this group project",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js",
+    "dev": "nodemon -w server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -25,12 +28,15 @@
     "express-handlebars": "^5.3.4",
     "express-session": "^1.17.2",
     "express-validator": "^6.13.0",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.0",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
   },
   "devDependencies": {
     "eslint": "^8.2.0",
     "eslint-config-prettier": "^8.3.0",
+    "nodemon": "^2.0.15",
     "prettier": "2.4.1"
   }
 }

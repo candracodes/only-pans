@@ -3,7 +3,7 @@
 
 ## Description
 
-This is a one-stop-shop for browsing, submitting and saving your favorite holiday inspire recipes.
+This is a one-stop-shop for browsing, submitting and saving your favorite holiday inspire recipes. More description to come...
 
 
 ## Table of Contents

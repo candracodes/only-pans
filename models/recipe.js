@@ -22,6 +22,7 @@ Recipe.init(
     directions: {
       type: DataTypes.TEXT,
       allowNull: false,
+    
     },
     recipe_type: {
       type: DataTypes.STRING,
