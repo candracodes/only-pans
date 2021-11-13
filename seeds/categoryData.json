@@ -1,14 +1,14 @@
 [
     {
-        "name": "Starters"
+        "category_name": "Starters"
     },
     {
-        "name": "Entrees"
+        "category_name": "Entrees"
     },
     {
-        "name": "Side Dishes"
+        "category_name": "Side Dishes"
     },
     {
-        "name": "Desserts"
+        "category_name": "Desserts"
     }
 ]

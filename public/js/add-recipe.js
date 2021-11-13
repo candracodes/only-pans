@@ -9,13 +9,13 @@ async function newFormHandler(event) {
 
     const response = await fetch(`/api/recipe`, {
         method: 'POST',
-        body: JSON.stringify({
+        body: {
             recipe_name,
             ingredients,
             directions,
             recipe_type,
             recipe_time,
-        }),
+        },
         headers: {
             'Content-Type': 'application/json',
         },
@@ -34,7 +34,8 @@ function addIngredients(event) {
     event.preventDefault();
 
     const newIngredient = document.querySelector('#ingredients');
-
+//array.filter / passin jquery selector as text
+// pull same stuff for updating recipe  .update based off element
     ingredientsArray.push(newIngredient);
     document.querySelector('#showIngredients').append("<li>" + newIngredient + "<li>");
     document.querySelector('#ingredients').val("");
