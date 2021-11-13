@@ -16,6 +16,9 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: 'Super secret secret',
+  // should I changed it to the bellow code as what Cody suggested? need to double check with him
+  // secret: process.env.SESSION_SECRET,
+  
   cookie: {},
   resave: false,
   saveUninitialized: true,
