@@ -8,7 +8,7 @@
     "serve": "nodemon server.js",
     "dev": "nodemon server.js",
     "start": "node server.js",
-    "seed" : "node seeds/seeds.js"
+    "seed": "node seeds/seeds.js"
   },
   "repository": {
     "type": "git",

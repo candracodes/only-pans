@@ -1,9 +1,9 @@
-$( document ).ready(function() {
-  // THIS IS JUST A QUICK FIX TO TOGGLE THE LOGIN FORM VS. THE SIGNUP FORM:
-
-// HIDE SIGNUP FORM BY DEFAULT
-$("#signUpContainer").hide();
-$("#signInContainer").show();
+// WHEN THE DOCUMENT LOADS, MAKE SURE THIS FUNCTIONALITY WORKS (SHOW/HIDE FORMS)
+$(document).ready(function () {
+  // HIDE SIGN-UP FORM BY DEFAULT
+  $("#signUpContainer").hide();
+  // SHOW SIGN-IN FORM BY DEFAULT
+  $("#signInContainer").show();
 
 });
 
@@ -80,4 +80,3 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
-

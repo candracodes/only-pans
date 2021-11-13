@@ -4,6 +4,8 @@
 html,
 body {
   height: 100%;
+  /* TODO: Change max-height if it interferes with pages other than login.handlebars */
+  max-height: 100px;
 }
 
 .main-top-100 {
@@ -30,6 +32,15 @@ body::after {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.showSignUp {
+  cursor: pointer;
+}
+
+.showSignIn{
+  cursor: pointer;
 }
 
 /* ========================================== 
