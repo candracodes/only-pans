@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 });
   
 // Log in
-router.post('login', async (req, res) => {
+router.post('/login', async (req, res) => {
     try {
         const dbUserData = await User.findOne({
             where: {

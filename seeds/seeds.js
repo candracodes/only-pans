@@ -39,4 +39,3 @@ const seedDatabase = async () => {
 
 seedDatabase();
 
-// we might not need this file
