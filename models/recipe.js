@@ -53,3 +53,5 @@ Recipe.init(
     modelName: "recipe",
   }
 );
+
+module.exports = Recipe;
