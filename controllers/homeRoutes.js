@@ -29,7 +29,7 @@ router.get('/', withAuth, async(req, res) => {
 });
 
 
-route.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     // If a session exists, redirect the request to te homepage
     if (res.session.loggedIn) {
         res.redirect('/'); 

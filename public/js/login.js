@@ -1,3 +1,24 @@
+$( document ).ready(function() {
+  // THIS IS JUST A QUICK FIX TO TOGGLE THE LOGIN FORM VS. THE SIGNUP FORM:
+
+// HIDE SIGNUP FORM BY DEFAULT
+$("#signUpContainer").hide();
+$("#signInContainer").show();
+
+});
+
+// FIRE WHEN USER CLICKS "SIGN IN"
+$(".showSignIn").on("click", function () {
+  $("#signInContainer").show();
+  $("#signUpContainer").hide();
+});
+
+// FIRE WHEN USER CLICKS "SIGN UP"
+$(".showSignUp").on("click", function () {
+  $("#signInContainer").hide();
+  $("#signUpContainer").show();
+});
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -60,19 +81,3 @@ document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
 
-// THIS IS JUST A QUICK FIX TO TOGGLE THE LOGIN FORM VS. THE SIGNUP FORM:
-
-// HIDE SIGNUP FORM BY DEFAULT
-$("#signUpContainer").hide();
-
-// FIRE WHEN USER CLICKS "SIGN IN"
-$(".showSignIn").on("click", function () {
-  $("#signInContainer").show();
-  $("#signUpContainer").hide();
-});
-
-// FIRE WHEN USER CLICKS "SIGN UP"
-$(".showSignUp").on("click", function () {
-  $("#signInContainer").hide();
-  $("#signUpContainer").show();
-});
