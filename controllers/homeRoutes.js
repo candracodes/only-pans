@@ -4,7 +4,7 @@ const { User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
-// this code was written on Wednesday ( we want to display login page before homeage.)
+// this code was written on Wednesday ( we want to display login page before homepage.)
 router.get('/', async (req,res) => {
     res.render('login');
 });
