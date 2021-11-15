@@ -1,6 +1,7 @@
 // GET ROUTES that render homepage.handlebars
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { User } = require('../models');
 
 router.get('/', withAuth, async(req, res) => {
     try {
