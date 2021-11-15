@@ -1,9 +1,9 @@
 // WHEN THE DOCUMENT LOADS, MAKE SURE THIS FUNCTIONALITY WORKS (SHOW/HIDE FORMS)
 $(document).ready(function () {
   // HIDE SIGN-UP FORM BY DEFAULT
-  $("#signUpContainer").hide();
+  $("#signUpContainer").show();
   // SHOW SIGN-IN FORM BY DEFAULT
-  $("#signInContainer").show();
+  $("#signInContainer").hide();
 
 });
 
