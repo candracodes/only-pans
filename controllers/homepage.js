@@ -1,12 +1,13 @@
 // GET ROUTES that render homepage.handlebars
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { User } = require('../models');
 
 router.get('/', withAuth, async(req, res) => {
     try {
         const dbUserData = await User.findAll({
             attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
+            order: [['email', 'ASC']],
         });
 
         const users = dbUserData.map((project) => project.get({ plain: true }));
