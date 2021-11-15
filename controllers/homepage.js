@@ -7,7 +7,7 @@ router.get('/', withAuth, async(req, res) => {
     try {
         const dbUserData = await User.findAll({
             attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
+            order: [['email', 'ASC']],
         });
 
         const users = dbUserData.map((project) => project.get({ plain: true }));
