@@ -1,11 +1,22 @@
+const recipeForm = document.querySelector(".new-recipe-form");
+const ingredientsInput = document.querySelector("#ingredients-input");
+const ingredientsButton = document.querySelector("#ingredients-button");
+const directionsInput = document.querySelector("#directions-input");
+const directionsButton = document.querySelector("#directions-button")
+const ingredientsDisplay = document.querySelector("#showIngredients");
+const directionsDisplay = document.querySelector("#showDirections");
+const removeButton = document.querySelector(".removeButton");
+
+
 async function newFormHandler(event) {
     event.preventDefault();
 
+    
+
     const recipe_name = document.querySelector('#dish_name').value;
-    const ingredients = ingredientsArray;
-    const directions = directionsArray;
+    const ingredients = pushIngredients();
+    const directions = pushDirections();
     const recipe_type = document.querySelector('#recipe_type').value;
-    const recipe_time = document.querySelector('#recipe_time').value;
 
     const response = await fetch(`/api/recipe`, {
         method: 'POST',
@@ -14,7 +25,6 @@ async function newFormHandler(event) {
             ingredients,
             directions,
             recipe_type,
-            recipe_time,
         },
         headers: {
             'Content-Type': 'application/json',
@@ -28,30 +38,85 @@ async function newFormHandler(event) {
       }
 };
 
-const ingredientsArray = [];
-
-function addIngredients(event) {
+ingredientsButton.addEventListener("click", function(event) {
     event.preventDefault();
 
-    const newIngredient = document.querySelector('#ingredients');
-//array.filter / passin jquery selector as text
-// pull same stuff for updating recipe  .update based off element
-    ingredientsArray.push(newIngredient);
-    document.querySelector('#showIngredients').append("<li>" + newIngredient + "<li>");
-    document.querySelector('#ingredients').val("");
-};
+    const ingredientsText = ingredientsInput.value.trim();
 
-const directionsArray = [];
+    if (ingredientsText === "") {
+        return;
+    }
+    
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    p.textContent = ingredientsText;
+    p.classList.add("ingredientsValue");
 
-function addDirections(event) {
+    let button = document.createElement("button");
+    button.textContent = "Remove";
+    button.type = "button";
+    button.classList.add("removeButton");
+    li.appendChild(p);
+    li.appendChild(button);
+    ingredientsDisplay.appendChild(li);
+
+    ingredientsInput.value = "";
+});
+
+$(document).on("click", ".removeButton", function(event) {
     event.preventDefault();
 
-    const newDirection = document.querySelector('#directions');
+    $(this).parent().remove();
+});
 
-    directionsArray.push(newDirection);
-    document.querySelector('#showDirections').append("<li>" + newDirection + "<li>");
-    document.querySelector('#directions').val("");
-};
+
+function pushIngredients() {
+    console.log($(".ingredientsValue"));
+    const ingredientsValueList = $(".ingredientsValue").map((el) => el.textContent);
+    console.log(ingredientsValueList);
+    return ingredientsValueList;
+}
+
+
+directionsButton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const directionsText = directionsInput.value.trim();
+
+    if (directionsText === "") {
+        return;
+    }
+    
+    let li = document.createElement("li");
+    let p = document.createElement("p");
+    p.textContent = directionsText;
+    p.classList.add("directionsValue");
+
+    let button = document.createElement("button");
+    button.textContent = "Remove";
+    button.type = "button";
+    button.classList.add("removeButton");
+    li.appendChild(p);
+    li.appendChild(button);
+    directionsDisplay.appendChild(li);
+
+    directionsInput.value = "";
+});
+
+$(document).on("click", ".removeButton", function(event) {
+    event.preventDefault();
+
+    $(this).parent().remove();
+});
+
+
+function pushDirections() {
+    console.log($(".directionsValue"));
+    const directionsValueList = $(".directionsValue").map((el) => el.textContent);
+    console.log(directionsValueList);
+    return directionsValueList;
+}
+
 
 
 
@@ -59,11 +124,3 @@ function addDirections(event) {
 document
     .querySelector('.new-recipe-form')
     .addEventListener('submit', newFormHandler);
-
-document
-    .querySelector('#ingredients')
-    .addEventListener('submit', addIngredients);
-
-document
-    .querySelector('#directions')
-    .addEventListener('submit', addDirections);
