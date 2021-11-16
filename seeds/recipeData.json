@@ -43,5 +43,72 @@
         "recipe_time": 15,
         "image": "/images/side-3-creamed-corn.jpeg"
         
+    },
+    {
+        "recipe_name": "Twice-Baked Fingerling Potatoes",
+        "ingredients": ["24 baby Yukon Gold or red potatoes, each about 2 inches across (2 to 2-1/4 lb.)", "2 Tbs. olive oil", "2 tsp. chopped fresh thyme", "Kosher salt and freshly ground black pepper", "3 oz. bacon (about 3 thick slices)", "cooked until crispy and crumbled", "6 Tbs. thinly sliced fresh chives", "1/2 cup crème fraîche or sour cream", "1/2 cup coarsely grated Parmigiano-Reggiano"],
+        "directions": ["Heat the oven to 425°F. Put the potatoes on a large baking sheet and toss with the olive oil. Sprinkle with 1 tsp. of the thyme, 1 tsp. salt, 1/2 tsp. pepper, and toss again. Bake the potatoes until they feel perfectly tender when pierced with a skewer, 20 to 25 minutes. Remove from the oven and let rest until cool enough to handle, about 10 minutes. If not working ahead, increase the oven temperature to 450°F.", "Carefully hollow out each potato: Begin by slicing off the top; use a small spoon to scoop out most of the flesh inside, transferring it to a large bowl. Discard the tops. Mash the potato flesh with a masher or a fork, then combine it with the bacon, 1/4 cup of the chives, the crème fraîche, the remaining 1 tsp. thyme, 1/2 tsp. salt, and 1/4 tsp. pepper. Season to taste with more salt and pepper.", "Using a small spoon and your fingers, fill the hollowed potatoes with this mixture; it should mound a bit. Sprinkle on the cheese.", "Return the potatoes to the 450°F oven and bake until the filling heats through, 8 to 10 minutes. Sprinkle with the remaining chives and serve warm."],
+        "recipe_type": "starters",
+        "recipe_time": 45,
+        "image": "/images/starter3-Twice-baked-potatoes.jpg"
+        
+    },
+    {
+        "recipe_name": "Roasted-Eggplant",
+        "ingredients": ["2 large eggplants (3 pounds), unpeeled, cut into 1 1/2-inch chunks", "2 tablespoons kosher salt", "1/2 medium shallot", "1 clove garlic", "1/2 cup flat-leaf parsley, packed", "2 tablespoons full flavored walnut oil", "1/4 cup extra-virgin olive oil, plus as needed", "1/2 teaspoon freshly ground pepper"],
+        "directions": ["Put the eggplant pieces in a large colander and sprinkle all over with the 2 tablespoons kosher salt. Set in the sink to drain for about 30 minutes.", "Preheat oven to 425 degrees F.", "Put a baking sheet in the oven to heat for 10 minutes.", "Meanwhile, peel and finely chop the shallot and garlic, and push to the side of the cutting board. Chop the parsley, then draw the shallots and garlic in with the herbs and chop them together, until finely chopped. Stir the aromatics and walnut oil together in a serving bowl.", "Toss the purged eggplant with the olive oil and pepper. Carefully remove the hot baking sheet from the oven and brush or drizzle with olive oil. Spread the eggplant out on the pan and return to the oven. Roast until the eggplant is tender yet firm and rich brown, about 30 minutes. Remove from the oven, toss with garlic and herbs. Serve right away or at room temperature."],
+        "recipe_type": "sides",
+        "recipe_time": 50,
+        "image": "/images/side1-roasted-eggplants.jpeg"
+        
+    },
+    {
+        "recipe_name": "Roasted-Red Potatoes",
+        "ingredients": ["1 1/2 pounds small red or white-skinned potatoes (or a mixture)", "1/8 cup good olive oil", "3/4 teaspoon kosher salt", "1/2 teaspoon freshly ground black pepper", "1 tablespoons minced garlic (3 cloves)", "2 tablespoons minced fresh rosemary leaves"],
+        "directions": ["Preheat the oven to 400 degrees F.", "Cut the potatoes in half or quarters and place in a bowl with the olive oil, salt, pepper, garlic and rosemary; toss until the potatoes are well coated. Dump the potatoes on a baking sheet and spread out into 1 layer; roast in the oven for at least 1 hour, or until browned and crisp. Flip twice with a spatula during cooking to ensure even browning.", "Remove the potatoes from the oven, season to taste, and serve."],
+        "recipe_type": "sides",
+        "recipe_time": 68,
+        "image": "/images/side2-roasted-red-potatoes.jpg"
+        
+    },
+    {
+        "recipe_name": "Quinoa-salad",
+        "ingredients": ["12 cups water", "1 1/2 cups quinoa, rinsed", "5 pickling cucumbers, peeled, ends trimmed, and cut into 1/4-inch cubes", "1 small red onion, cut into 1/4-inch cubes", "1 large tomato, cored, seeded, and diced", "1 bunch Italian parsley leaves, chopped", "2 bunches mint leaves, chopped", "1/2 cup extra-virgin olive oil", "1/4 cup red wine vinegar", "1 lemon, juiced", "1 1/2 teaspoons salt", "3/4 teaspoon freshly ground black pepper", "4 heads endive, trimmed and separated into individual spears", "1 avocado, peeled, seeded and diced, for garnish"],
+        "directions": ["Bring the water to a boil in a large saucepan. Add the quinoa, stir once, and return to a boil. Cook uncovered, over medium heat for 12 minutes. Strain and rinse well with cold water, shaking the sieve well to remove all moisture.", "When dry, transfer the quinoa to a large bowl. Add the cucumbers, onion, tomato, parsley, mint, olive oil, vinegar, lemon juice, salt, and pepper and toss well. Spoon onto endive spears, top with avocado, and serve."],
+        "recipe_type": "entrees",
+        "recipe_time": 40,
+        "image": "/images/entree1-quinoa-salad.jpeg"
+        
+    },
+    {
+        "recipe_name": "Honey Baked Ham",
+        "ingredients": ["1 10-pound bone-in smoked ham (with water added)", "1 1/2 cups packed light brown sugar", "1/2 cup clover honey"],
+        "directions": ["Adjust the oven racks to accommodate a large roasting pan. Fit the pan with a shallow roasting rack. Preheat the oven to 350 degrees F.", "Unwrap the ham and rinse it under cold water. Place it on the rack in the roasting pan. Cover with foil and bake 1 hour 40 minutes. Meanwhile, combine the brown sugar and honey in a saucepan and cook over medium heat until the mixture is smooth and the sugar has dissolved.", "Pour the brown sugar glaze over the ham and continue roasting1 hour 40 minutes more, basting at least twice with the drippings in the roaster. (To adjust the total roasting time for a smaller or larger ham, calculate 20 minutes per pound.) Check for doneness by inserting a meat thermometer into a meaty spot (not into fat or touching the bone)-it should register 160 degrees F.", "Let the ham stand 15 minutes before slicing to allow the juices to set. (You can make the ham up to 2 hours ahead; tent with foil and serve at room temperature.)"],
+        "recipe_type": "entrees",
+        "recipe_time": 180,
+        "image": "/images/entree2-honey-baked-ham.jpeg"
+        
+    },
+    {
+        "recipe_name": "Featherlite Chocolate cake",
+        "ingredients": ["12 tablespoons unsalted butter (1 1/2 sticks), plus more for the pan", "1 3/4 cups sugar", "2 eggs", "1 teaspoon pure vanilla extract", "2 1/4 cups sifted cake flour, plus more for the pan", "1/2 cup good-quality cocoa powder, such as Valrhona or Droste", "1 1/4 teaspoons baking soda", "3/4 teaspoon salt", "1 1/4 cups ice water"],
+        "directions": [""],
+        "recipe_type": "desserts",
+        "recipe_time": 75,
+        "image": "/images/Dessert2-Featherlite-Chocolate cake.jpeg"
+        
+    },
+    {
+        "recipe_name": "Creamed Corn",
+        "ingredients": ["2(10 ounce) packages frozen corn kernels, thawed" , "1 cup heavy cream" , "1 tsp salt" , "2 tbsp granulated sugar" , "1/4 tsp freshly ground black pepper" , "2 tbsp butter" , "1 cup whole milk" , "2 tbsp all-purpose flour" , "1/4 cup freshly grated Parmesan cheese"],
+        "directions": ["In a skillet over medium heat, combine corn, heavy cream, salt, sugar, pepper, and butter." , "Whisk together the milk and flour, and stir into the corn mixture" , "Cook, stirring over medium heat until mixture is thickened and corn is cooked through" , "Remove from heat, and stir in Parmesan until melted. Serve hot"],
+        "recipe_type": "sides",
+        "recipe_time": 15,
+        "image": "/images/side-3-creamed-corn.jpeg"
+        
     }
+
+
+
+
 ]
