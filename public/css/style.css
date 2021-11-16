@@ -104,6 +104,18 @@ body::after {
   margin-left: 3rem !important;
   width: 30%;
 }
+#showIngredients li {
+  list-style: none;
+}
+#showIngredients button {
+  margin-left: 20px;
+}
+#showDirections li {
+  list-style: none;
+}
+#showDirections button {
+  margin-left: 20px;
+}
 
 /* ========================================== 
   -- FOOTER
@@ -139,6 +151,9 @@ body::after {
 
 .submenu li a:hover {
   color: #ffffff!important;
+}
+.changeMe {
+  width: 100%;
 }
 
 

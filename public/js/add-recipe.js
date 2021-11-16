@@ -38,6 +38,7 @@ async function newFormHandler(event) {
       }
 };
 
+// THIS LOGIC CREATES LIST ITEMS FOR INGREDIENTS
 ingredientsButton.addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -53,16 +54,20 @@ ingredientsButton.addEventListener("click", function(event) {
     p.classList.add("ingredientsValue");
 
     let button = document.createElement("button");
-    button.textContent = "Remove";
+    button.innerHTML = "<i class='fas fa-trash-alt'></i> Remove";
     button.type = "button";
+    
     button.classList.add("removeButton");
+    button.classList.add("btn-danger");
+    button.classList.add("btn");
     li.appendChild(p);
-    li.appendChild(button);
+    p.appendChild(button);
     ingredientsDisplay.appendChild(li);
 
     ingredientsInput.value = "";
 });
 
+// THIS LOGIC REMOVES SPECIFIC INGREDIENT LIST ITEMS
 $(document).on("click", ".removeButton", function(event) {
     event.preventDefault();
 
@@ -77,7 +82,7 @@ function pushIngredients() {
     return ingredientsValueList;
 }
 
-
+// THIS LOGIC CREATES LIST ITEMS FOR DIRECTIONS
 directionsButton.addEventListener("click", function(event) {
     event.preventDefault();
 
@@ -93,16 +98,19 @@ directionsButton.addEventListener("click", function(event) {
     p.classList.add("directionsValue");
 
     let button = document.createElement("button");
-    button.textContent = "Remove";
+    button.innerHTML = "<i class='fas fa-trash-alt'></i> Remove";
     button.type = "button";
     button.classList.add("removeButton");
+    button.classList.add("btn-danger");
+    button.classList.add("btn");
     li.appendChild(p);
-    li.appendChild(button);
+    p.appendChild(button);
     directionsDisplay.appendChild(li);
 
     directionsInput.value = "";
 });
 
+// THIS LOGIC REMOVES SPECIFIC DIRECTION LIST ITEMS
 $(document).on("click", ".removeButton", function(event) {
     event.preventDefault();
 

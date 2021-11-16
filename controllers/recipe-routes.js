@@ -24,4 +24,29 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+<<<<<<< HEAD
+=======
+// TEST
+router.get('/category/:type', async (req, res) => {
+  try {
+    const dbRecipeData = await Recipe.findAll( {
+      where: {
+        recipe_type: req.params.type
+      }
+    });
+    const recipes = dbRecipeData.map((recipe) =>
+    recipe.get({ plain: true })
+    );
+    res.render('recipes', {
+      recipes,
+      type: req.params.type
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+>>>>>>> 7b47a1dd96d5c0440950e8358155b6185b35ce37
 module.exports = router;
