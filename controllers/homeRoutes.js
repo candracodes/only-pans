@@ -4,7 +4,7 @@ const { User } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
-// this code was written on Wednesday ( we want to display login page before homeage.)
+// this code was written on Wednesday and it worked, keep this!
 router.get('/', async (req,res) => {
     res.render('login');
 });
@@ -29,11 +29,9 @@ router.get('/', withAuth, async(req, res) => {
 });
 
 
-router.get('/login', (req, res) => {
-    
+router.get('/login', (req, res) => {   
     // If a session exists, redirect the request to te homepage
     if (req.session.logged_in) {
-
         res.redirect('/homepage'); 
         return;
     }
