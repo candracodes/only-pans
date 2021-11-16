@@ -1,4 +1,3 @@
-// TODO: AT PRESENT, RECIPES STILL DOESN'T RENDER. JUST GETTING THE PATH STARTED SO WE CAN REVIEW AS A  GROUP
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const express = require('express');
@@ -24,7 +23,5 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
 
 module.exports = router;
