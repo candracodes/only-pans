@@ -1,72 +1,117 @@
-<!doctype html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>OnlyPans | Holiday Recipes at Home</title>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta name='description' content='' />
+    <title>OnlyPans | Holiday Recipes at Home</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3'
+      crossorigin='anonymous'
+    />
 
-  <!-- Custom Signin CSS -->
-  <link href="/css/style.css" rel="stylesheet">
+    <!-- Custom Signin CSS -->
+    <link href='/css/style.css' rel='stylesheet' />
 
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- FontAwesome -->
+    <link
+      rel='stylesheet'
+      href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'
+      integrity='sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p'
+      crossorigin='anonymous'
+    />
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
+      integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p'
+      crossorigin='anonymous'
+    ></script>
+    <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+    <script
+      src='https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js'
+    ></script>
 
+  </head>
 
-</head>
-
-<body>
+  <body>
     <!-- TOP NAV: START -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img src="images/logo.png" height="50px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-        <form class="me-4">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <!-- HOMEPAGE -->
-            <li class="nav-item">
-              <a class="nav-link" href="/homepage"><i class="fas fa-home"></i> Home</a>
-            </li>
-            <!-- MY PROFILE -->
-            <li class="nav-item">
-              <a class="nav-link" href="/myprofile"><i class="fas fa-user-circle"></i> My Profile</a>
-            </li>
-            <!-- RECIPES -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdownXxl" data-bs-toggle="dropdown"
-                aria-expanded="false">Recipes</a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownXxl">
-                <!-- TODO: Swap href for correct routes -->
-                <li><a class="dropdown-item" href="/recipes">All Recipes</a></li>
-                <li><a class="dropdown-item" href="/starters">Starters</a></li>
-                <li><a class="dropdown-item" href="/entrees">Entrees</a></li>
-                <li><a class="dropdown-item" href="/sides">Side Dishes</a></li>
-                <li><a class="dropdown-item" href="/desserts">Desserts</a></li>
-              </ul>
-            </li>
-            <!-- LOGOUT -->
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="logout">Logout</a>
-            </li>
+    <nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
+      <div class='container-fluid'>
+        <a class='navbar-brand' href='/'><img
+            src='images/logo.png'
+            height='50px'
+          /></a>
+        <button
+          class='navbar-toggler'
+          type='button'
+          data-bs-toggle='collapse'
+          data-bs-target='#navbarCollapse'
+          aria-controls='navbarCollapse'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+        >
+          <span class='navbar-toggler-icon'></span>
+        </button>
+        <div
+          class='collapse navbar-collapse justify-content-end'
+          id='navbarCollapse'
+        >
+          <form class='me-4'>
+            <ul class='navbar-nav me-auto mb-2 mb-md-0'>
+              <!-- HOMEPAGE -->
+              <li class='nav-item'>
+                <a class='nav-link' href='/homepage'><i class='fas fa-home'></i>
+                  Home</a>
+              </li>
+              <!-- MY PROFILE -->
+              <li class='nav-item'>
+                <a class='nav-link' href='/myprofile'><i
+                    class='fas fa-user-circle'
+                  ></i>
+                  My Profile</a>
+              </li>
+              <!-- RECIPES -->
+              <li class='nav-item dropdown'>
+                <a
+                  class='nav-link dropdown-toggle'
+                  href='#'
+                  id='dropdownXxl'
+                  data-bs-toggle='dropdown'
+                  aria-expanded='false'
+                >Recipes</a>
+                <ul class='dropdown-menu' aria-labelledby='dropdownXxl'>
+                  <!-- TODO: Swap href for correct routes -->
+                  <li><a class='dropdown-item' href='/recipes'>All Recipes</a></li>
+                  <li><a
+                      class='dropdown-item'
+                      href='/starters'
+                    >Starters</a></li>
+                  <li><a class='dropdown-item' href='/entrees'>Entrees</a></li>
+                  <li><a class='dropdown-item' href='/sides'>Side Dishes</a></li>
+                  <li><a
+                      class='dropdown-item'
+                      href='/desserts'
+                    >Desserts</a></li>
+                </ul>
+              </li>
+              <!-- LOGOUT -->
+              <li class='nav-item'>
+                <a class='nav-link' href='#' id='logout'>Logout</a>
+              </li>
 
-          </ul>
-        </form>
+            </ul>
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- TOP NAV: END -->
-  <!-- Render the sub layout -->
-      {{{ body }}}
-</body>
-<script src="../js/logout.js"></script>>
+    </nav>
+    <!-- TOP NAV: END -->
+    <!-- Render the sub layout -->
+    {{{body}}}
+
+    <script src='../js/logout.js'></script>
+  </body>
+
 </html>

@@ -97,8 +97,8 @@
                     <label for="ingredients" class="form-label">Ingredients</label>
                     <div class="input-group mb-3">
                       <input type="text" class="form-control" placeholder="Type an ingredient, and hit the add button"
-                        aria-label="ingredients" aria-describedby="ingredients">
-                      <button class="btn btn-outline-secondary" type="button" id="ingredients"><i
+                        aria-label="ingredients" aria-describedby="ingredients" id="ingredients-input">
+                      <button class="btn btn-outline-secondary" type="button" id="ingredients-button"><i
                           class="fas fa-plus-circle"></i> Add Ingredient</button>
                     </div>
 
@@ -106,8 +106,9 @@
                     <label for="directions" class="form-label">Directions</label>
                     <div class="input-group mb-3">
                       <input type="text" class="form-control" placeholder="Add a recipe step, and hit the add button"
-                        aria-label="directions" aria-describedby="directions">
-                      <button class="btn btn-outline-secondary" type="button" id="directions"><i
+                        aria-label="directions" aria-describedby="directions"
+                        id="directions-input">
+                      <button class="btn btn-outline-secondary" type="button" id="directions-button"><i
                           class="fas fa-plus-circle"></i> Add Step</button>
                     </div>
 
@@ -117,14 +118,16 @@
                   <!-- RIGHT SIDE OF FORM-->
                   <div class="col-lg-6 col-md-6 col-sm-12 text-gray">
 
+                    {{!-- <span class="mb-5 pb-5"> --}}
                     <span class="mb-5 pb-5" id="showIngredients">
-                      (Show ingredients here)
+                      
                     </span>
+                    {{!-- </span> --}}
 
                     <br>
 
                     <span class="mb-5 pb-5" id="showDirections">
-                      (Show directions here)
+                      
                     </span>
                   </div>
                 </div>
@@ -172,6 +175,5 @@
   <!-- END: FOOTER -->
 
   <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="../js/add-recipe.js"></script>>
+  
