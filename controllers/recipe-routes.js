@@ -24,8 +24,6 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-<<<<<<< HEAD
-=======
 // TEST
 router.get('/category/:type', async (req, res) => {
   try {
@@ -48,5 +46,4 @@ router.get('/category/:type', async (req, res) => {
 });
 
 
->>>>>>> 7b47a1dd96d5c0440950e8358155b6185b35ce37
 module.exports = router;
