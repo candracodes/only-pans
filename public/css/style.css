@@ -116,6 +116,9 @@ body::after {
 #showDirections button {
   margin-left: 20px;
 }
+.modalImage img {
+  width: 100%;
+}
 
 /* ========================================== 
   -- FOOTER
