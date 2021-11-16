@@ -51,6 +51,9 @@ Recipe.init(
         key: "id",
       },
     },
+    image : {
+      type: DataTypes.STRING
+    }
   },
   {
     sequelize,

@@ -7,278 +7,53 @@
       id='our-recipes'
       class='row align-items-md-stretch bg-dark white-text mb-5'
     >
-      {{!-- <h2 class='text-white ps-5 pt-5'>All Recipes</h2> --}}
-      <h2 class='text-white ps-5 pt-5'>{{recipe.recipe_type}}</h2>
-      <hr class='title-border mb-2' />
-      <ul class='text-white submenu ms-3'>
-        <!--TODO: Swap these hrefs so that they link to the appropriate routes -->
-        <li class='p-3'><a href='/starters'><i
-              class='fas fa-utensils'
-            ></i>
+      <h2 class='text-white ps-5 pt-5'>All Recipes</h2>
+      <h5 class="text-muted ps-5 pb-5">{Needs a steamy headeline...}</h5>
+      {{!-- <ul class='text-white submenu ms-3'>
+        <li class="p-3"><a href="/recipes"><i class="fas fa-angle-double-left"></i> All Recipes</a></li>
+        <li class='p-3'><a href='/recipes/category/Starters'><i class='fas fa-utensils'></i>
             Starters</a></li>
-        <li class='p-3'><a href='/entrees'><i
-              class='fas fa-utensils'
-            ></i>
+        <li class='p-3'><a href='/recipes/category/Entrees'><i class='fas fa-utensils'></i>
             Entrees</a></li>
-        <li class='p-3'><a href='/sides'><i
-              class='fas fa-utensils'
-            ></i>
+        <li class='p-3'><a href='/recipes/category/Sides'><i class='fas fa-utensils'></i>
             Side Dishes</a></li>
-        <li class='p-3'><a href='/desserts'><i
-              class='fas fa-utensils'
-            ></i>
+        <li class='p-3'><a href='/recipes/category/Desserts'><i class='fas fa-utensils'></i>
             Desserts</a></li>
-      </ul>
+      </ul> --}}
     </div>
     <!-- END: SECTION 1 — INTRO -->
 
     <!-- START: SECTION 2 — STARTERS -->
     <div id='our-recipes' class='row align-items-md-stretch bg-light'>
-      <h2 class='ps-5 pt-5'>Starters</h2>
+      <!-- IF STATEMENT THAT DETERMINES WHAT THE HEADER WILL DISPLAY -->
+      {{#if type}}
+      <h2 class='ps-5 pt-5'>{{type}}</h2>
+      {{else}}
+      <h2 class='ps-5 pt-5'>All Recipes</h2>
+      {{/if}}
+
       <hr class='title-border' />
       <div class='row align-items-md-stretch'>
         <!-- DISH 1 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-starter.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
+        {{#each recipes as |recipe|}}
+          <div class='col-md-3'>
+            <div class='p-5 rounded-3'>
+              <img class='changeMe' src={{recipe.image}} />
+              <h2 class='recipe_name'>{{recipe.recipe_name}}</h2>
+              <button
+                class='btn btn-outline-dark'
+                type='button'
+                data-bs-toggle='modal'
+                data-bs-target='#exampleModal'
+              >View Recipe</button>
+            </div>
           </div>
-        </div>
-        <!-- DISH 2 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-starter.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 3 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-starter.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 4 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-starter.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
+        {{/each}}
+
       </div>
 
     </div>
     <!-- END: SECTION 2 — STARTERS -->
-
-    <!-- START: SECTION 3 — ENTREES -->
-    <div id='our-recipes' class='row align-items-md-stretch bg-light'>
-      <h2 class='ps-5 pt-5'>Entrees</h2>
-      <hr class='title-border' />
-      <div class='row align-items-md-stretch'>
-        <!-- DISH 1 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-entree.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 2 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-entree.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 3 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-entree.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 4 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-entree.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- END: SECTION 3 — ENTREES -->
-
-    <!-- START: SECTION 4 — SIDE DISHES -->
-    <div id='our-recipes' class='row align-items-md-stretch bg-light'>
-      <h2 class='ps-5 pt-5'>Side Dishes</h2>
-      <hr class='title-border' />
-      <div class='row align-items-md-stretch'>
-        <!-- DISH 1 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-side.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 2 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-side.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 3 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-side.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 4 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-side.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- END: SECTION 4 — SIDE DISHES -->
-
-    <!-- START: SECTION 5 — DESSERTS -->
-    <div id='our-recipes' class='row align-items-md-stretch bg-light'>
-      <h2 class='ps-5 pt-5'>Desserts</h2>
-      <hr class='title-border' />
-      <div class='row align-items-md-stretch'>
-        <!-- DISH 1 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-dessert.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 2 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-dessert.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 3 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-dessert.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-        <!-- DISH 4 -->
-        <div class='col-md-3'>
-          <div class='h-100 p-5 rounded-3'>
-            <img src='/images/thumbs-dessert.jpg' class='w-100' />
-            <h2 class='recipe_name'>{recipe_name}</h2>
-            <button
-              class='btn btn-outline-dark'
-              type='button'
-              data-bs-toggle='modal'
-              data-bs-target='#exampleModal'
-            >View Recipe</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- END: SECTION 5 — DESSERTS -->
 
   </div>
 </main>
@@ -353,7 +128,7 @@
           </div>
           <div class='col-lg-8 col-md-8 col-sm-12'>
             <h4>Ingredients</h4>
-            <p class='ingredients'>{ingredients}</p>
+            <p class='ingredients'>{{recipe.ingredients}}</p>
 
             <h4>Directions</h4>
             <p class='directions'>{directions}</p>
