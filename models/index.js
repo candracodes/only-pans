@@ -1,6 +1,6 @@
-const User = require('./User');
+const User = require('./user');
 const Category = require('./Category');
-const Recipe = require('./Recipe');
+const Recipe = require('./recipe');
 
 // Associations between recipe and category
 Category.hasMany(Recipe, {
