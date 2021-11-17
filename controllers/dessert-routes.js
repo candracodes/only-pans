@@ -6,6 +6,11 @@ const { Recipe, Category } = require('../models');
 router.get('/', withAuth, async (req, res) => {
   try {
     const dbRecipeData = await Recipe.findAll({
+      // should I include something here that says where {recipe_type: req.body.starters}
+      where: {
+        recipe_type: "desserts"
+    },
+      
       include: [
         {
           model: Category
@@ -17,7 +22,7 @@ router.get('/', withAuth, async (req, res) => {
     recipes.get({ plain: true })
     );
     console.log(recipes);
-    res.render('recipes', {
+    res.render('desserts', {
         recipes,
     });
   } catch (err) {
@@ -25,50 +30,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// THIS FILTERS THE PAGE BY RECIPE TYPE
-router.get('/category/:type', async (req, res) => {
-  try {
-    const dbRecipeData = await Recipe.findAll( {
-      where: {
-        recipe_type: req.params.type
-      }
-    });
-    const recipes = dbRecipeData.map((recipe) =>
-    recipe.get({ plain: true })
-    );
-    res.render('recipes', {
-      recipes,
-      type: req.params.type
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-// TEST WITH DAVID:
-router.get('/filter', withAuth, async (req, res) => {
-  try {
-    const dbRecipeData = await Recipe.findAll({
-      include: [
-        {
-          model: Category
-        },
-      ],
-    });
-    
-    const recipes = dbRecipeData.map((recipes) =>
-    recipes.get({ plain: true })
-    );
-    console.log(recipes);
-    res.json( recipes )
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 
 
 // THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS

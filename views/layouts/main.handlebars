@@ -39,70 +39,48 @@
   <body>
 
     <!-- TOP NAV: START -->
-    <nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
-      <div class='container-fluid'>
-        <a class='navbar-brand ps-4' href='/'><img
-            src='/images/logo.png'
-            height='50px'
-          /></a>
-        <button
-          class='navbar-toggler'
-          type='button'
-          data-bs-toggle='collapse'
-          data-bs-target='#navbarCollapse'
-          aria-controls='navbarCollapse'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-        >
-          <span class='navbar-toggler-icon'></span>
-        </button>
-        <div
-          class='collapse navbar-collapse justify-content-end'
-          id='navbarCollapse'
-        >
-          <form class='me-4'>
-            <ul class='navbar-nav me-auto mb-2 mb-md-0'>
-              <!-- HOMEPAGE -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/homepage'><i class='fas fa-home'></i>
-                  Home</a>
-              </li>
-              <!-- MY PROFILE -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/myprofile'><i
-                    class='fas fa-user-circle'
-                  ></i>
-                  My Profile</a>
-              </li>
-              <!-- ALL RECIPES -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/recipes'>
-                  <i class='fas fa-utensils'></i> All Recipes</a>
-              </li>
-              <!-- STARTERS -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/recipes/category/Starters'>
-                  <i class='fas fa-utensils'></i> Starters</a>
-              </li>
-              <!-- ENTREES -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/recipes/category/Entrees'>
-                  <i class='fas fa-utensils'></i> Entrees</a>
-              </li>
-              <!-- SIDES -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/recipes/category/Sides'>
-                  <i class='fas fa-utensils'></i> Side Dishes</a>
-              </li>
-              <!-- DESSERTS -->
-              <li class='nav-item'>
-                <a class='nav-link' href='/recipes/category/Desserts'>
-                  <i class='fas fa-utensils'></i> Desserts</a>
-              </li>
-              <!-- LOGOUT -->
-              <li class='nav-item'>
-                <a class='nav-link' href='#' id='logout'>Logout</a>
-              </li>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="/homepage"><img src="images/logo.png" height="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+        <form class="me-4">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <!-- HOME -->
+            <li class="nav-item">
+              <a class="nav-link" href="/homepage"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <!-- MY PROFILE -->
+            <li class="nav-item">
+              <a class="nav-link" href="myprofile"><i class="fas fa-user-circle"></i> My Profile</a>
+            </li>
+            <!-- ALL RECIPES -->
+            <li class="nav-item">
+              <a class="nav-link" href="/recipes"><i class="fas fa-utensils"></i> All Recipes</a>
+            </li>
+            <!-- STARTERS -->
+            <li class="nav-item">
+              <a class="nav-link" href="/starters"><i class="fas fa-utensils"></i> Starters</a>
+            </li>
+            <!-- ENTREES -->
+            <li class="nav-item">
+              <a class="nav-link" href="/entrees"><i class="fas fa-utensils"></i> Entrees</a>
+            </li>
+            <!-- SIDES -->
+            <li class="nav-item">
+              <a class="nav-link" href="/sides"><i class="fas fa-utensils"></i> Side Dishes</a>
+            </li>
+            <!-- DESSERTS -->
+            <li class="nav-item">
+              <a class="nav-link" href="/desserts"><i class="fas fa-utensils"></i> Desserts</a>
+            </li>
+            <!-- LOGOUT -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
 
             </ul>
           </form>
