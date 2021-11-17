@@ -14,18 +14,24 @@ async function newFormHandler(event) {
     
 
     const recipe_name = document.querySelector('#dish_name').value;
-    const ingredients = pushIngredients();
-    const directions = pushDirections();
-    const recipe_type = document.querySelector('#recipe_type').value;
+    let ingredients = pushIngredients();
+    let directions = pushDirections();
+    //const recipe_type = document.querySelector('#recipe_type').value;
+    const recipe_type = $('#recipe_type :selected').text();
+    ingredients = JSON.stringify(ingredients);
+    directions = JSON.stringify(directions);
+    console.log(ingredients);
+    console.log(recipe_type);
+    console.log(directions);
 
-    const response = await fetch(`/api/recipe`, {
+    const response = await fetch('/api/recipe', {
         method: 'POST',
-        body: {
+        body: JSON.stringify({
             recipe_name,
             ingredients,
             directions,
             recipe_type,
-        },
+        }),
         headers: {
             'Content-Type': 'application/json',
         },
@@ -76,11 +82,19 @@ $(document).on("click", ".removeButton", function(event) {
 
 
 function pushIngredients() {
-    console.log($(".ingredientsValue"));
-    const ingredientsValueList = $(".ingredientsValue").map((el) => el.textContent);
-    console.log(ingredientsValueList);
-    return ingredientsValueList;
-}
+    var ingredientsArray = [];
+    $('.ingredientsValue').each(function () {
+        var ingredientAdd = $(this).text().split(' ', 2)
+        ingredientsArray.push(ingredientAdd[0]);
+    });
+
+    return ingredientsArray;
+
+//     console.log($(".ingredientsValue"));
+//     const ingredientsValueList = $(".ingredientsValue").map((el) => el.textContent);
+//     console.log(ingredientsValueList);
+//     return ingredientsValueList;
+ }
 
 // THIS LOGIC CREATES LIST ITEMS FOR DIRECTIONS
 directionsButton.addEventListener("click", function(event) {
@@ -119,10 +133,16 @@ $(document).on("click", ".removeButton", function(event) {
 
 
 function pushDirections() {
-    console.log($(".directionsValue"));
-    const directionsValueList = $(".directionsValue").map((el) => el.textContent);
-    console.log(directionsValueList);
-    return directionsValueList;
+    var directionsArray = [];
+    $('.directionsValue').each(function () {
+        var directionsAdd = $(this).text().split(' ', 2)
+        directionsArray.push(directionsAdd[0]);
+    })
+    return directionsArray;
+    // console.log($(".directionsValue"));
+    // const directionsValueList = $(".directionsValue").map((el) => el.textContent);
+    // console.log(directionsValueList);
+    // return directionsValueList;
 }
 
 

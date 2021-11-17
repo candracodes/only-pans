@@ -28,10 +28,10 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    recipe_time: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
+    // recipe_time: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    // },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,

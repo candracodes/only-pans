@@ -263,7 +263,7 @@
   <div class='modal-dialog'>
     <div class='modal-content'>
       <div class='modal-header'>
-        <h5 class='modal-title' id='exampleModalLabel'>{dish_name}</h5>
+        <h5 class='modal-title' id='exampleModalLabel'>{{recipe.recipe_name}}</h5>
         <button
           type='button'
           class='btn-close'
@@ -278,10 +278,10 @@
           </div>
           <div class='col-lg-8 col-md-8 col-sm-12'>
             <h4>Ingredients</h4>
-            <p class='ingredients'>{ingredients}</p>
+            <p class='ingredients'>{{recipe.ingredients}}</p>
 
             <h4>Directions</h4>
-            <p class='directions'>{directions}</p>
+            <p class='directions'>{{recipe.directions}}</p>
           </div>
         </div>
       </div>

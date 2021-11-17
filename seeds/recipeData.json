@@ -95,11 +95,7 @@
         "directions": ["Serving suggestion: Dust with confectioners' sugar and serve with milk", "Arrange a rack in the upper 1/3 of the oven and preheat to 350 degrees F.", "Butter and flour a bundt pan or tube pan. (You can use a mixture of cocoa powder and flour instead of flour, to prevent white spots on the cake.)", "In a standing mixer fitted with a whisk attachment, or using a hand mixer, cream the butter until light and fluffy. Mix in the sugar. One at a time, mix in the eggs, then the vanilla, occasionally scraping down the mixing bowl.", "Meanwhile, in another bowl, sift together the flour, cocoa powder, baking soda, and 3/4 teaspoon salt.", "Add 1/3 of the flour mixture; then 1/3 of the ice water. Repeat, mixing after each addition. Transfer the batter to the pan and bake until springy and dry, about 40 to 45 minutes.", "Let cool in the pan on a rack, then carefully turn the cake out. Just before serving, sift confectioners' sugar over the top. Serve with very cold milk!"],
         "recipe_type": "desserts",
         "recipe_time": 75,
-<<<<<<< HEAD
         "image": "/images/Dessert2-Chocolate-cake.jpeg"
-=======
-        "image": "/images/Dessert2-Featherlite-Chocolate-cake.jpeg"
->>>>>>> 4680df6c4ea20f40cb661e5515f2833768df9cf0
         
     },
     {
@@ -138,11 +134,6 @@
         "image": "/images/starter4-Pea-Pesto-Crostini.jpeg"
         
     }
-    
-
-
-
-
 
 
 ]
