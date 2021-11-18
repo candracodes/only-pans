@@ -32,30 +32,8 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-// router.get('/', withAuth, async (req, res) => {
-//     try {
-//         const recipeData = await Recipe.findAll({
-//             where: {
-//                 user_id: req.session.user_id,
-//             },
 
-//             include: [{ model: User }],
-
-//         });
-//         const recipes = recipeData.map((recipes) =>
-//             recipes.get({ plain: true })
-//         );
-//         console.log(recipes);
-//         res.render('myprofile', {
-//             recipes,
-//         });
-//     } catch (err) {
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
-// });
-
-// THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS.....do I need this here as well???
+// THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS
 router.get('/filter', withAuth, async (req, res) => {
     try {
         const dbRecipeData = await Recipe.findAll({
@@ -87,9 +65,6 @@ router.get('/profile', withAuth, async (req, res) => {
             }
       )
       
-    //   const recipes = dbRecipeData.map((recipes) =>
-    //   recipes.get({ plain: true })
-    //   );
       console.log(dbRecipeData);
       res.json( dbRecipeData )
     } catch (err) {

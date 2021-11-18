@@ -12,7 +12,6 @@
         on your OnlyPans profile.</p>
       <hr class='title-border mb-2' />
       <ul class='text-white submenu ms-3'>
-        <!--TODO: Swap these hrefs so that they link to the appropriate routes -->
         <li class='p-3'><a href='/recipes'><i
               class='fas fa-angle-double-left'
             ></i>
@@ -73,6 +72,48 @@
         </div>
         {{/each}}
         <!-- end for loop here -->
+
+        <!-- START ITEM 2 -->
+        <!-- TODO: REVISIT THIS LOGIC LATER; DOES NOT PROPERLY POST TO MYPROFILE -->
+        {{!-- <div class='accordion-item'>
+          <h2 class='accordion-header favoriteRecipeName' id='flush-heading2'>
+            <button
+              class='accordion-button collapsed'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#flush-collapse2'
+              aria-expanded='false'
+              aria-controls='flush-collapse2'
+            >
+              {favorite.recipe_name}
+            </button>
+          </h2>
+          <div
+            id='flush-collapse2'
+            class='accordion-collapse collapse'
+            aria-labelledby='flush-heading2'
+            data-bs-parent='#accordionFlushExample'
+          >
+            <div class='accordion-body'>
+              <div class='row'>
+                <div class='col-lg-4 col-md-4 col-sm-12'>
+                  <span id='favoriteImage' class='favoriteImage'>
+              </span>
+                </div>
+                <div class='col-lg-8 col-md-8 col-sm-12'>
+                  <h4>Ingredients</h4>
+                  <p class="favoriteIngredients">{favorite.ingredients}</p>
+                  <h4>Directions</h4>
+                  <p class="favoriteDirections">{favorite.directions}</p>
+                  <button class='btn btn-outline-danger' type='button'>❌ Remove
+                    From Favorites (Future Development)</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div> --}}
+        <!-- END ITEM 2-->
         
 
       </div>
@@ -109,7 +150,7 @@
       <a href='https://github.com/thutuephan' target='_blank'><i
           class='fab fa-github'
         ></i>
-        Alice Phan</a><br />
+        Thu Phan</a><br />
       <a href='https://github.com/dduckpena' target='_blank'><i
           class='fab fa-github'
         ></i>
@@ -142,3 +183,4 @@
   integrity='sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p'
   crossorigin='anonymous'
 ></script>
+<script src='../js/favorites.js'></script>

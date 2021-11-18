@@ -158,7 +158,9 @@ body::after {
 .changeMe {
   width: 100%;
 }
-
+.favoriteImage img{
+  width: 100%;
+}
 
 /* ========================================== 
   -- MY PROFILE

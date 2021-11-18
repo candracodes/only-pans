@@ -78,53 +78,53 @@ $(document).on("click", ".viewRecipeBtn", function(event) {
     // populate modalDirectionsEl with {{recipe.directions}}, 
 });
 
-$(document).on("click", ".favoritesbtn", function(event) {
-    event.preventDefault();
-    console.log("The View Recipe Button with this id (" + this.id + ") was clicked");
-    // define a variable for the modal header/recipe name: modalRecipeName
-    let modalRecipesEl = document.getElementById("modalRecipeName");
+// $(document).on("click", ".favoritesbtn", function(event) {
+//     event.preventDefault();
+//     console.log("The View Recipe Button with this id (" + this.id + ") was clicked");
+//     // define a variable for the modal header/recipe name: modalRecipeName
+//     let modalRecipesEl = document.getElementById("modalRecipeName");
     
-    // define a variable for the modal ingredients: modalIngredients
-    let modalIngredientsEl = document.getElementById("modalIngredients");
+//     // define a variable for the modal ingredients: modalIngredients
+//     let modalIngredientsEl = document.getElementById("modalIngredients");
 
-    // define a variable for the modal ingredients: modalDirections
-    let modalDirectionsEl = document.getElementById("modalDirections");
+//     // define a variable for the modal ingredients: modalDirections
+//     let modalDirectionsEl = document.getElementById("modalDirections");
 
-    // define a variable for the modal image: modalImage
-    let modalImageEl = document.getElementById("modalImage");
+//     // define a variable for the modal image: modalImage
+//     let modalImageEl = document.getElementById("modalImage");
 
-    // define variable for the button ID
-    let btnID = this.id;
-    console.log(typeof btnID);
+//     // define variable for the button ID
+//     let btnID = this.id;
+//     console.log(typeof btnID);
 
-    // AJAX CALL:
-    $.ajax({
+//     // AJAX CALL:
+//     $.ajax({
 
-        url : '/recipes/filter',
-        type : 'POST',
-        dataType:'json',
+//         url : '/recipes/filter',
+//         type : 'POST',
+//         dataType:'json',
         
-    })
-    .then(
-        function (response){
-            console.log(response);
-            console.log(response[0].id);
+//     })
+//     .then(
+//         function (response){
+//             console.log(response);
+//             console.log(response[0].id);
             
-            // run a loop that goes through the entire response for recipes
-            for (let i = 0; i <= response.length; i++) {
-             // take out recipe_name, ingredients, and directions
-                if (btnID == response[i].id) {
-                    // test to see if it's extracting properly
-                    console.log(response[i].recipe_name);
-                    console.log(response[i].ingredients);
-                    console.log(response[i].directions);
-                    // append the data into the HTML variables
-                    modalRecipesEl.textContent = response[i].recipe_name;
-                    modalIngredientsEl.textContent = response[i].ingredients;
-                    modalDirectionsEl.textContent = response[i].directions;
-                    modalImageEl.innerHTML = '<img src="' + response[i].image + '"/>';
-                }
-            }
-        }
-    );
-});
+//             // run a loop that goes through the entire response for recipes
+//             for (let i = 0; i <= response.length; i++) {
+//              // take out recipe_name, ingredients, and directions
+//                 if (btnID == response[i].id) {
+//                     // test to see if it's extracting properly
+//                     console.log(response[i].recipe_name);
+//                     console.log(response[i].ingredients);
+//                     console.log(response[i].directions);
+//                     // append the data into the HTML variables
+//                     modalRecipesEl.textContent = response[i].recipe_name;
+//                     modalIngredientsEl.textContent = response[i].ingredients;
+//                     modalDirectionsEl.textContent = response[i].directions;
+//                     modalImageEl.innerHTML = '<img src="' + response[i].image + '"/>';
+//                 }
+//             }
+//         }
+//     );
+// });
