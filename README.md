@@ -9,7 +9,6 @@ This is a one-stop-shop for browsing, submitting and saving your favorite holida
 ## Table of Contents
 - [Important URLs](#urls)
 - [Contributors](#contributors)
-- [Foreword](#foreword)
 - [Usage](#usage)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
@@ -22,6 +21,7 @@ This is a one-stop-shop for browsing, submitting and saving your favorite holida
 ## URLs
 - [GitHub Repo URL](https://github.com/candracodes/only-pans)
 - [Deployed Heroku Application URL](https://onlypans-group-3.herokuapp.com/)
+- [Wireframe](https://6rua4b.axshare.com/#id=c8ss5k&p=login&view=default)
 
 ## Contributors
 - [Candra Fried](github.com/candracodes)
