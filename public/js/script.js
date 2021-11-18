@@ -21,6 +21,7 @@ $(document).on("click", ".viewRecipeBtn", function(event) {
     // define a variable for the modal image: modalImage
     let modalImageEl = document.getElementById("modalImage");
 
+    // let favoriteBtnEl = document.getElementById("favoritesBtn");
     // define variable for the button ID
     let btnID = this.id;
     console.log(typeof btnID);
@@ -77,7 +78,7 @@ $(document).on("click", ".viewRecipeBtn", function(event) {
     // populate modalDirectionsEl with {{recipe.directions}}, 
 });
 
-$(document).on("click", "#favorites-button", function(event) {
+$(document).on("click", ".favoritesbtn", function(event) {
     event.preventDefault();
     console.log("The View Recipe Button with this id (" + this.id + ") was clicked");
     // define a variable for the modal header/recipe name: modalRecipeName

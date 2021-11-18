@@ -4,6 +4,7 @@ const { User, Recipe, Category } = require('../models');
 const recipeData = require('./recipeData.json');
 const userData = require('./userData.json');
 const categoryData = require('./categoryData.json');
+const Favorites = require('../models/favorites');
 
 
 const seedDatabase = async () => {
@@ -32,7 +33,10 @@ const seedDatabase = async () => {
 
     }
 
-    
+    await Favorites.create({user_id: 1, recipe_id: 1}, {
+        individualHooks: true,
+        returning: true,
+    });
 
     process.exit(0);
 };

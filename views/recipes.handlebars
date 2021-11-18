@@ -30,6 +30,7 @@
               <img class='changeMe' src={{recipe.image}} />
               <h2 class='recipe_name'>{{recipe.recipe_name}}</h2>
               <button id={{recipe.id}} class='btn btn-outline-dark viewRecipeBtn' type='button' data-bs-toggle='modal' data-bs-target='#exampleModal'>View Recipe</button>
+              <button id={{recipe.id}} class='btn btn-outline-dark favoritesBtn2' type='button'>Favorite</button>
             </div>
           </div>
         {{/each}}
@@ -127,7 +128,7 @@
           class='btn btn-secondary mr-auto'
           data-bs-dismiss='modal'
         >Close</button>
-        <button type='button' class='btn btn-primary' id='favorites-button'>Add to Favorites</button>
+        <button type='button' class='btn btn-primary favoritesBtn' id='favoritesBtn'>Add to Favorites</button>
       </div>
     </div>
   </div>
