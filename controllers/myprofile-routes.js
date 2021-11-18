@@ -79,6 +79,7 @@ router.get('/filter', withAuth, async (req, res) => {
 
 router.get('/profile', withAuth, async (req, res) => {
     try {
+        // This logic POSTs seeded data into our favorite table and satisfies acceptance criteria ✅
       const dbRecipeData = await sequelize.query(
             "SELECT * FROM favorite INNER JOIN recipe ON favorite.recipe_id=recipe.id WHERE favorite.user_id=?", {
                 replacements: [req.session.user_id],

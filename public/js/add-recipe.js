@@ -70,7 +70,7 @@ ingredientsButton.addEventListener("click", function(event) {
     button.classList.add("btn-danger");
     button.classList.add("btn");
     li.appendChild(p);
-    li.appendChild(button);
+    p.appendChild(button);
     ingredientsDisplay.appendChild(li);
 
     ingredientsInput.value = "";
@@ -114,7 +114,7 @@ directionsButton.addEventListener("click", function(event) {
     button.classList.add("btn-danger");
     button.classList.add("btn");
     li.appendChild(p);
-    li.appendChild(button);
+    p.appendChild(button);
     directionsDisplay.appendChild(li);
 
     directionsInput.value = "";

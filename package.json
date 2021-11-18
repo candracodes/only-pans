@@ -31,6 +31,7 @@
     "express-validator": "^6.13.0",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.13.0",
+    "morgan": "^1.10.0",
     "mysql2": "^2.3.3-rc.0",
     "sequelize": "^6.9.0"
   },
