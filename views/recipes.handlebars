@@ -8,7 +8,9 @@
       class='row align-items-md-stretch bg-dark white-text mb-5'
     >
       <h2 class='text-white ps-5 pt-5'>All Recipes</h2>
-      <h5 class="text-muted ps-5 pb-5">{Needs a steamy headeline...}</h5>
+      <h5 class='text-muted ps-5 pb-5'>See all of our recipes — these dishes are
+        ready to take you on a delicious ride.
+      </h5>
     </div>
     <!-- END: SECTION 1 — INTRO -->
 
@@ -16,9 +18,9 @@
     <div id='our-recipes' class='row align-items-md-stretch bg-light'>
       <!-- IF STATEMENT THAT DETERMINES WHAT THE HEADER WILL DISPLAY -->
       {{#if type}}
-      <h2 class='ps-5 pt-5'>{{type}}</h2>
+        <h2 class='ps-5 pt-5'>{{type}}</h2>
       {{else}}
-      <h2 class='ps-5 pt-5'>All Recipes</h2>
+        <h2 class='ps-5 pt-5'>All Recipes</h2>
       {{/if}}
 
       <hr class='title-border' />
@@ -29,8 +31,20 @@
             <div class='p-5 rounded-3'>
               <img class='changeMe' src={{recipe.image}} />
               <h2 class='recipe_name'>{{recipe.recipe_name}}</h2>
-              <button id={{recipe.id}} class='btn btn-outline-dark viewRecipeBtn' type='button' data-bs-toggle='modal' data-bs-target='#exampleModal'>View Recipe</button>
-              <button id={{recipe.id}} class='btn btn-outline-dark favoritesBtn2' type='button'>Favorite</button>
+              <button
+                id={{recipe.id}}
+                class='btn btn-outline-dark viewRecipeBtn'
+                type='button'
+                data-bs-toggle='modal'
+                data-bs-target='#exampleModal'
+              >View Recipe</button>
+              <button
+                id={{recipe.id}}
+                class='btn btn-primary favoritesBtn2'
+                type='button'
+                data-bs-toggle='modal'
+                data-bs-target='#exampleModal2'
+              ><i class='fas fa-heart'></i> Favorite</button>
             </div>
           </div>
         {{/each}}
@@ -50,7 +64,10 @@
     <div class='col-md-4 col-sm-12'>
       <h3>About this project</h3>
       <p class='text-muted'>
-        {Daniel, take a crack at writing a synopsis. Make it "sexy" lol}
+        OnlyPans was created to share and upload food recipes for everyone to
+        use and cook up. We only let our members see the exclusive, hot, tasty
+        recipes that others from our community have shared, as well as premiere
+        OnlyPans original recipes.
       </p>
     </div>
     <div class='col-md-4 col-sm-12 footer-elements'>
@@ -93,7 +110,7 @@
 </footer>
 <!-- END: FOOTER -->
 
-<!-- START: MODAL POP-UP -->
+<!-- START: VIEW RECIPES MODAL POP-UP -->
 <div class='modal fade' id='exampleModal' tabindex='-1' aria-hidden='true'>
   <div class='modal-dialog'>
     <div class='modal-content'>
@@ -109,16 +126,16 @@
       <div class='modal-body'>
         <div class='row'>
           <div class='col-lg-4 col-md-4 col-sm-12'>
-            <span id="modalImage" class="modalImage">
-              {{!-- THIS IMAGE GETS POPULATED DYNAMICALLY FROM SCRIPT.JS --}}
+            <span id='modalImage' class='modalImage'>
+              {{! THIS IMAGE GETS POPULATED DYNAMICALLY FROM SCRIPT.JS }}
             </span>
           </div>
           <div class='col-lg-8 col-md-8 col-sm-12'>
             <h4>Ingredients</h4>
-            <p id="modalIngredients">{recipe.ingredients}</p>
+            <p id='modalIngredients'>{recipe.ingredients}</p>
 
             <h4>Directions</h4>
-            <p id="modalDirections">{directions}</p>
+            <p id='modalDirections'>{directions}</p>
           </div>
         </div>
       </div>
@@ -128,12 +145,55 @@
           class='btn btn-secondary mr-auto'
           data-bs-dismiss='modal'
         >Close</button>
-        <button type='button' class='btn btn-primary favoritesBtn' id='favoritesBtn'>Add to Favorites</button>
+        <button
+          type='button'
+          class='btn btn-primary favoritesBtn'
+          id='favoritesBtn'
+        >Add to Favorites</button>
       </div>
     </div>
   </div>
 </div>
-<!-- START: MODAL POP-UP -->
+<!-- START: VIEW RECIPES MODAL POP-UP -->
+
+<!-- START: FAVORITES MODAL POP-UP -->
+<div class='modal fade' id='exampleModal2' tabindex='-1' aria-hidden='true'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h5 class='modal-title text-success'>SUCCESS!</h5>
+        <button
+          type='button'
+          class='btn-close'
+          data-bs-dismiss='modal'
+          aria-label='Close'
+        ></button>
+      </div>
+      <div class='modal-body'>
+        <div class='row'>
+          <div class='col-lg-12 col-md-12 col-sm-12'>
+            <p id='modalIngredients'>🍽️ Your recipe has been added to your
+              favorites. Visit your profile to take a look.</p>
+          </div>
+        </div>
+      </div>
+      <div class='modal-footer justify-content-between'>
+        <button
+          type='button'
+          class='btn btn-secondary mr-auto'
+          data-bs-dismiss='modal'
+        >Close</button>
+        <a
+          class='btn btn-primary favoritesBtn'
+          id='favoritesBtn'
+          href='/myprofile'
+          role='button'
+        >View Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: FAVORITES MODAL POP-UP -->
 
 <!-- SCRIPTS -->
 <script
@@ -143,11 +203,13 @@
 ></script>
 
 <!-- JQUERY CORE JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  {{!-- <script src="/node_modules/jquery/dist/jquery.min.js"></script> --}}
+<script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+{{! <script src="/node_modules/jquery/dist/jquery.min.js"></script> }}
 
-  <!-- JQUERY-UI JS -->
-  <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js"></script>
-  {{!-- <script src="/node_modules/jquery-ui/external/jquery/jquery.js"></script> --}}
+<!-- JQUERY-UI JS -->
+<script
+  src='https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.js'
+></script>
+{{! <script src="/node_modules/jquery-ui/external/jquery/jquery.js"></script> }}
 
-  <script src="../js/script.js"></script>  
+<script src='../js/script.js'></script>
