@@ -17,14 +17,23 @@ async function newFormHandler(event) {
     const ingredients = pushIngredients();
     const directions = pushDirections();
     const recipe_type = document.querySelector('#recipe_type').value;
-
-    const response = await fetch(`/api/recipe`, {
+    // const user_id = req.session.user_id;
+    // is this the correct route?
+    console.log({
+        recipe_name,
+        ingredients,
+        directions,
+        recipe_type,
+        // user_id,
+    },);
+    const response = await fetch(`/recipes`, {
         method: 'POST',
         body: {
             recipe_name,
             ingredients,
             directions,
             recipe_type,
+            // user_id,
         },
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +70,7 @@ ingredientsButton.addEventListener("click", function(event) {
     button.classList.add("btn-danger");
     button.classList.add("btn");
     li.appendChild(p);
-    p.appendChild(button);
+    li.appendChild(button);
     ingredientsDisplay.appendChild(li);
 
     ingredientsInput.value = "";
@@ -77,7 +86,8 @@ $(document).on("click", ".removeButton", function(event) {
 
 function pushIngredients() {
     console.log($(".ingredientsValue"));
-    const ingredientsValueList = $(".ingredientsValue").map((el) => el.textContent);
+    let ingredientsValueList = $(".ingredientsValue");
+    ingredientsValueList = ingredientsValueList.map((el) => el.textContent);
     console.log(ingredientsValueList);
     return ingredientsValueList;
 }
@@ -104,7 +114,7 @@ directionsButton.addEventListener("click", function(event) {
     button.classList.add("btn-danger");
     button.classList.add("btn");
     li.appendChild(p);
-    p.appendChild(button);
+    li.appendChild(button);
     directionsDisplay.appendChild(li);
 
     directionsInput.value = "";
