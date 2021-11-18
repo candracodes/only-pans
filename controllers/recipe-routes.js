@@ -47,7 +47,7 @@ router.get('/category/:type', async (req, res) => {
   }
 });
 
-// TEST WITH DAVID:
+// THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS
 router.get('/filter', withAuth, async (req, res) => {
   try {
     const dbRecipeData = await Recipe.findAll({
@@ -69,27 +69,24 @@ router.get('/filter', withAuth, async (req, res) => {
   }
 });
 
-
-
-// THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS
-router.get('/filter', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
-    const dbRecipeData = await Recipe.findAll({
-      include: [
-        {
-          model: Category
-        },
-      ],
+    console.log(req.body);
+    const newRecipe = await Recipe.create({
+      recipe_name: req.body.recipe_name,
+      ingredients: req.body.ingredients,
+      directions: req.body.directions,
+      recipe_type: req.body.recipe_type,
+      // user_id: req.session.user_id,
     });
-    
-    const recipes = dbRecipeData.map((recipes) =>
-    recipes.get({ plain: true })
+
+    const recipes = newRecipe.map((recipes) =>
+    recipes.get({ plain: true})
     );
-    console.log(recipes);
-    res.json( recipes )
+
+    res.status(200).json(recipes);
   } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 

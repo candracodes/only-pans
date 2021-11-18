@@ -7,6 +7,7 @@ const starterRoutes = require('./starter-routes');
 const sidesRoutes = require('./side-routes');
 const dessertRoutes = require('./dessert-routes');
 const entreeRoutes = require('./entree-routes');
+const myProfileRoutes = require('./myprofile-routes');
 
 router.use('/', homeRoutes);
 router.use('/homepage', homepage);
@@ -16,5 +17,6 @@ router.use('/starters', starterRoutes);
 router.use('/sides', sidesRoutes);
 router.use('/desserts', dessertRoutes);
 router.use('/entrees', entreeRoutes);
+router.use('/myprofile', myProfileRoutes);
 
 module.exports = router;
