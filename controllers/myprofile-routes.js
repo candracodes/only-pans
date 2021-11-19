@@ -32,6 +32,34 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
+// CREATING THIS POST ROUTE IN ORDER TO MAKE THE AJAX CALL FROM FAVORITES.JS WORK
+router.post('/', withAuth, async (req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+
+            attributes: { exclude: ['password'] },
+            include: [{ model: Recipe }],
+        });
+        const favorites = await sequelize.query(
+            "SELECT * FROM favorite INNER JOIN recipe ON favorite.recipe_id=recipe.id WHERE favorite.user_id=?", {
+                replacements: [req.session.user_id],
+                type: QueryTypes.SELECT,
+            }
+      );
+        const user = userData.get({ plain: true });
+
+        res.render('myprofile', {
+            ...user,
+            favorites,
+            logged_in: true,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+
 
 // THIS ROUTE WAS CREATED SOLELY TO POPULATE MODALS
 router.get('/filter', withAuth, async (req, res) => {

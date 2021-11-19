@@ -239,13 +239,13 @@
 </footer>
 <!-- END: FOOTER -->
 
-<!-- START: MODAL POP-UP -->
-<div class='modal fade' id='exampleModal' tabindex='-1' aria-hidden='true'>
+<!-- START: SUCCESS MODAL POP-UP -->
+<div class='modal fade successModal' id='exampleModal' tabindex='-1' aria-hidden='true'>
   <div class='modal-dialog'>
     <div class='modal-content'>
       <div class='modal-header'>
         <h5 class='modal-title text-success'>SUCCESS!</h5>
-        <button
+        <button id="closeSuccessModal1"
           type='button'
           class='btn-close'
           data-bs-dismiss='modal'
@@ -262,7 +262,7 @@
         </div>
       </div>
       <div class='modal-footer justify-content-between'>
-        <button
+        <button id="closeSuccessModal2"
           type='button'
           class='btn btn-secondary mr-auto'
           data-bs-dismiss='modal'
@@ -271,7 +271,7 @@
     </div>
   </div>
 </div>
-<!-- START: MODAL POP-UP -->
+<!-- END: SUCCESS MODAL POP-UP -->
 
 <!-- SCRIPTS -->
 <script src='../js/add-recipe.js'></script>

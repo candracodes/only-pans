@@ -1,4 +1,4 @@
-// TODO: REVISIT THIS LOGIC; DOESN'T CURRENTLY POST TO MYPROFILE
+// TODO: REVISIT THIS LOGIC; DOESN'T CURRENTLY POST TO MYPROFILE (ATTEMPT 1)
 $(document).on("click", ".favoritesBtn2", function(event) {
     event.preventDefault();
     console.log("The Favorites Button with this id (" + this.id + ") was clicked");
@@ -22,7 +22,7 @@ $(document).on("click", ".favoritesBtn2", function(event) {
     $.ajax({
 
         url : '/myprofile',
-        type : 'POST',
+        type : 'GET',
         dataType:'json',
         
     })
@@ -49,3 +49,43 @@ $(document).on("click", ".favoritesBtn2", function(event) {
         }
     );
 });
+
+
+// async function addToFavorites(event) {
+//     event.preventDefault();
+
+//     const recipe_name = document.querySelector('#modalRecipeName').value;
+//     const ingredients = document.querySelector('#modalIngredients').value;
+//     const directions = document.querySelector('#modalDirections').value;
+//     const image = document.querySelector('#modalImage').value;
+
+//     console.log({
+//         recipe_name,
+//         ingredients,
+//         directions,
+//         recipe_type,
+//         image
+//     }, );
+//     const response = await fetch(`/myprofile`, {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             recipe_name,
+//             ingredients,
+//             directions,
+//             image,
+//         }),
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//     });
+
+//     if (response.ok) {
+//         $('#exampleModal2').modal('show');
+        
+//     } else {
+//         alert('Failed to add recipe to favorites');
+//     }
+// };
+
+// document
+//     .addEventListener('.addToFavoritesButton', addToFavorites);
