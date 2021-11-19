@@ -31,6 +31,8 @@ Recipe.init(
     recipe_time: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 300,
+
     },
     date_created: {
       type: DataTypes.DATE,

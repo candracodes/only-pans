@@ -71,25 +71,18 @@ router.get('/filter', withAuth, async (req, res) => {
 
 
 router.post('/', withAuth, async (req, res) => {
+  console.log(req.body)
   try {
-    console.log(req.body);
     const newRecipe = await Recipe.create({
-      recipe_name: req.body.recipe_name,
-      ingredients: req.body.ingredients,
-      directions: req.body.directions,
-      recipe_type: req.body.recipe_type,
-      // user_id: req.session.user_id,
+      ...req.body,
     });
 
-    const recipes = newRecipe.map((recipes) =>
-    recipes.get({ plain: true})
-    );
-
-    res.status(200).json(recipes);
+    res.status(200).json(newRecipe);
   } catch (err) {
     res.status(400).json(err);
   }
-});
+})
+
 
 
 
