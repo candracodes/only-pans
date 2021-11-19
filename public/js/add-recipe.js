@@ -14,8 +14,8 @@ async function newFormHandler(event) {
     
 
     const recipe_name = document.querySelector('#dish_name').value;
-    const ingredients = pushIngredients();
-    const directions = pushDirections();
+    const ingredients = JSON.stringify(pushIngredients());
+    const directions = JSON.stringify(pushDirections());
     //const recipe_type = document.querySelector('#recipe_type').value;
     // const user_id = req.session.user_id;
     // is this the correct route?
@@ -47,7 +47,7 @@ async function newFormHandler(event) {
 
         //document.location.replace('/');// look into functionality of this...
       } else {
-        //alert('Failed to add recipe');
+        alert('Failed to add recipe');
       }
 };
 
