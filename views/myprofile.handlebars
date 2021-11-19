@@ -75,7 +75,7 @@
 
         <!-- START ITEM 2 -->
         <!-- TODO: REVISIT THIS LOGIC LATER; DOES NOT PROPERLY POST TO MYPROFILE -->
-        {{!-- <div class='accordion-item'>
+        <div class='accordion-item'>
           <h2 class='accordion-header favoriteRecipeName' id='flush-heading2'>
             <button
               class='accordion-button collapsed'
@@ -85,7 +85,7 @@
               aria-expanded='false'
               aria-controls='flush-collapse2'
             >
-              {favorite.recipe_name}
+              {{favorite.recipe_name}}
             </button>
           </h2>
           <div
@@ -102,9 +102,13 @@
                 </div>
                 <div class='col-lg-8 col-md-8 col-sm-12'>
                   <h4>Ingredients</h4>
-                  <p class="favoriteIngredients">{favorite.ingredients}</p>
+                  <p class="favoriteIngredients">
+                    {{favorite.ingredients}}
+                    </p>
                   <h4>Directions</h4>
-                  <p class="favoriteDirections">{favorite.directions}</p>
+                  <p class="favoriteDirections">
+                    {{favorite.directions}}
+                    </p>
                   <button class='btn btn-outline-danger' type='button'>❌ Remove
                     From Favorites (Future Development)</button>
                 </div>
@@ -112,7 +116,7 @@
 
             </div>
           </div>
-        </div> --}}
+        </div>
         <!-- END ITEM 2-->
         
 
