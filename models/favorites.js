@@ -13,6 +13,7 @@ Favorites.init(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            defaultValue: 1
         },
         recipe_id: {
             type: DataTypes.INTEGER,

@@ -8,6 +8,7 @@ const sidesRoutes = require('./side-routes');
 const dessertRoutes = require('./dessert-routes');
 const entreeRoutes = require('./entree-routes');
 const myProfileRoutes = require('./myprofile-routes');
+const favoriteRoutes = require('./favorite-routes');
 
 router.use('/', homeRoutes);
 router.use('/homepage', homepage);
@@ -18,5 +19,6 @@ router.use('/sides', sidesRoutes);
 router.use('/desserts', dessertRoutes);
 router.use('/entrees', entreeRoutes);
 router.use('/myprofile', myProfileRoutes);
+router.use('/favorite', favoriteRoutes);
 
 module.exports = router;
