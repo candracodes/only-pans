@@ -1,6 +1,7 @@
 const User = require('./user');
 const Category = require('./Category');
 const Recipe = require('./recipe');
+const Favorite = require('./favorites');
 
 // Associations between recipe and category
 Category.hasMany(Recipe, {
@@ -21,6 +22,9 @@ Recipe.belongsTo(User, {
     foreignKey: 'user_id',
 
 })
-module.exports = { User, Category, Recipe };
+
+
+
+module.exports = { User, Category, Recipe, Favorite };
 
 
