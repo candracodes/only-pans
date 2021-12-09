@@ -1,0 +1,1 @@
+$(document).on("click",".favoritesBtn2",async function(e){var a=this.id;(await fetch(`/favorite`,{method:"POST",body:JSON.stringify({recipe_id:a}),headers:{"Content-Type":"application/json"}})).ok?$("#exampleModal2").modal("show"):alert("Failed to add favorite recipe")});
